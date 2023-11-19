@@ -1,3 +1,4 @@
+// Config
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -5,19 +6,20 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
+// Home
 app.get('/', (req, res) => {
-    res.render('index.ejs', { section: 'home' }); // Pass 'home' as the section to highlight in the navigation
+    res.render('index.ejs', { section: 'home' }); 
 });
 
-app.get('/location', (req, res) =>{
-    res.render('location.ejs')
+
+// Other routes 
+app.get(':/box:/id', (req, res) =>{
+    res.render('hobbies.ejs', { content : content })
 })
 
-app.get('/post/:id', (req, res) => {
-    const postId = req.params.id;
-    res.render('post', { postId });
-});
 
+
+// Server listen
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });

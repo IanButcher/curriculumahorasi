@@ -4,202 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ian Butcher</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <div class="row">
-        <div class="col-4">
-            <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
-                <nav class="nav nav-pills flex-column">
-                    <a class="nav-link" href="#item-1">About Me</a>
-                    <nav class="nav nav-pills flex-column">
-                        <a class="nav-link ms-3 my-1" href="#item-1-1">Hobbies</a>
-                        <a class="nav-link ms-3 my-1" href="#item-1-2">Skills</a>
-                    </nav>
-                    <a class="nav-link" href="#item-2">Education</a>
-                    <nav class="nav nav-pills flex-column">
-                        <a class="nav-link ms-3 my-1" href="#item-2-1">Formal</a>
-                        <a class="nav-link ms-3 my-1" href="#item-2-2">Courses</a>
-                    </nav>
-                    <a class="nav-link" href="#item-3">Tools</a>
-                    <nav class="nav nav-pills flex-column">
-                        <a class="nav-link ms-3 my-1" href="#item-3-1">Front End</a>
-                        <a class="nav-link ms-3 my-1" href="#item-3-2">Backend</a>
-                    </nav>
-                    <a class="nav-link" href="#item-4">Projects & Experience</a>
-                    <nav class="nav nav-pills flex-column">
-                        <a class="nav-link ms-3 my-1" href="#item-4-1">School Projects</a>
-                        <a class="nav-link ms-3 my-1" href="#item-4-2">Personal Projects</a>
-                        <a class="nav-link ms-3 my-1" href="#item-4-3">Experience</a>
-                    </nav>
-                </nav>
-            </nav>
-        </div>
+    <div class="portfolio-container">
+        <section class="box about-me">
+            <h2>About Me</h2>
+            <p>I'm a passionate <span style="color: #ffcc00;">Trainee Full-stack programmer</span>
+                from Argentina <br> <br>
+                I love to learn new things! And I am pretty good at it
+            </p>
+        </section>
 
+        <section class="box age">
+            <h2>Age</h2>
+            <p>My actual age is <b style="color: #ff6666;">17</b>, and I birth on October 27th</p>
+        </section>
 
+        <section class="box goals">
+            <h2>Goals</h2>
+            <p>My main goal is to <span style="color: #66ccff;">boost up </span>your projects! <br> <br>
+                I also want to be a DevOps (I'm getting there)
+            </p>
+        </section>
+        <section class="box education">
+            <h2>Education</h2>
+            <p> <b>2011 - 2017 |</b> Elementary school <span>Calvario</span> <br> <br>
+                <b>2018 - 2024 |</b> High school <span>ProA La Falda</span>
+            </p>
+        </section>
+        <section class="box tools">
+            <h2>Tools</h2>
+            <ul>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Express</li>
+                <li>Node.js</li>
+                <li>Bootstrap</li>
+                <li>Git</li>
+                <li>Python</li>
+            </ul>
+        </section>
 
+        <a href="https://github.com/IanButcher" target="_blank">
+            <section class="box github">
+                <i class="fa-brands fa-github fa-7x"></i>
+            </section>
+        </a>
 
+        <a href="https://discordapp.com/users/1108860836958711919" target="_blank"> 
+            <section class="box discord">
+                <i class="fa-brands fa-discord fa-6x"></i>
+            </section>
+        </a>
 
+        <a href="https://www.linkedin.com/in/ian-butcher-148a1a28a" target="_blank">
+            <section class="box linkedin">
+                <i class="fa-brands fa-linkedin fa-7x"></i>
+            </section>
+        </a>
 
+        <a href="https://twitter.com/clay_xf" target="_blank">
+            <section class="box twitter">
+                <i class="fa-brands fa-x-twitter fa-7x"></i>
+            </section>
+        </a>
 
-        <div class="col-8">
-            <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
-                <div id="item-1">
-                    <h4>About Me</h4>
-                    <div class="post">
-                        <div class="post-content">
-                            <h5>Introduction</h5>
-                            <p>This is what im interested about!
-                                You'll find hobbies, skills, location, goals, etc.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="item-1-1">
-                    <h5>Hobbies</h5>
-                    <a href="/hobbies">
-                        <div class="post">
-                            <div class="post-content">
-                                <h5>Hobbies and Goals</h5>
-                                <p>What I like and would like to be!</p>
-                            </div>
-                            <div class="post-info"> 15 upvotes | 5 comments</div>
-                        </div>
-                    </a>
-                </div>
-                <div id="item-1-2">
-                    <h5>Skills</h5>
-                    <a href="/skills">
-                        <div class="post">
-                            <div class="post-content">
-                                <h5>My Skills</h5>
-                                <p>Actitudes, languages, and more!</p>
-                            </div>
-                            <div class="post-info"> 15 upvotes | 5 comments</div>
-                        </div>
-                    </a>
-                </div>
-                <div id="item-2">
-                    <h4>Education</h4>
-                    <div class="post">
-                        <div class="post-content">
-                            <h5>Introduction</h5>
-                            <p>In this section you'll find my stuides
-                                It includes both formal (such as High School, Elementary School, etc)
-                                and courses I did!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="item-2-1">
-                    <h5>Formal Education</h5>
-                    <a href="/formalstudies">
-                        <div class="post">
-                            <div class="post-content">
-                                <h5>Professional education</h5>
-                                <p>Elementary and high schools I've been</p>
-                            </div>
-                            <div class="post-info">15 upvotes | 5 comments</div>
-                        </div>
-                    </a>
-                </div>
-                <div id="item-2-2">
-                    <h5>Other Education</h5>
-                    <a href="/courses">
-                        <div class="post">
-                            <div class="post-content">
-                                <h5>Courses</h5>
-                                <p>Courses from my country, udemy or colleges</p>
-                            </div>
-                            <div class="post-info">15 upvotes | 5 comments</div>
-                        </div>
-                    </a>
-                </div>
-                <div id="item-3">
-                    <h4>Tools</h4>
-                    <div class="post">
-                        <div class="post-content">
-                            <h5>Introduction</h5>
-                            <p>The tools I know or I work with!</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="item-3-1">
-                    <h5>Front-End</h5>
-                    <a href="/frontendtools">
-                        <div class="post">
-                            <div class="post-content">
-                                <h5>Frontend Tools</h5>
-                                <p>The tools I use for front-end development</p>
-                            </div>
-                            <div class="post-info">15 upvotes | 5 comments</div>
-                        </div>
-                    </a>
-                </div>
-                <div id="item-3-2">
-                    <h5>Back-End</h5>
-                    <a href="/backendtools">
-                        <div class="post">
-                            <div class="post-content">
-                                <h5>Backend Tools</h5>
-                                <p>The tools I use for back-end and db development</p>
-                            </div>
-                            <div class="post-info">15 upvotes | 5 comments</div>
-                        </div>
-                    </a>
-                </div>
-                <div id="item-4">
-                    <h4>Projects & Experience</h4>
-                    <div class="post">
-                        <div class="post-content">
-                            <h5>Introduction</h5>
-                            <p>Projects I've done or participated in!
-                                (including both school and personal projects)
-                                My working experience too!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="item-4-1">
-                    <h5>School Projects</h5>
-                    <a href="/schoolprojects">
-                        <div class="post">
-                            <div class="post-content">
-                                <h5>School Projects</h5>
-                                <p>The most interesting things I've developed in school</p>
-                            </div>
-                            <div class="post-info">15 upvotes | 5 comments</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div id="item-4-2">
-                <h5>Personal Projects</h5>
-                <a href="/personalprojects">
-                    <div class="post">
-                        <div class="post-content">
-                            <h5>My Projects</h5>
-                            <p>The things I've developed myself!</p>
-                        </div>
-                        <div class="post-info">15 upvotes | 5 comments</div>
-                    </div>
-                </a>
-            </div>
-            <div id="item-4-3">
-                <h5>Experience</h5>
-                <a href="/experience">
-                    <div class="post">
-                        <div class="post-content">
-                            <h5>My working experience</h5>
-                            <p>Jobs I have had!</p>
-                        </div>
-                        <div class="post-info">15 upvotes | 5 comments</div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <section class="box projects">
+            <h2>Projects</h2>
+            <p>2023 | Argentina CANSAT <br>
+                2018 | CUBESAT <br>
+                2023 | Reverse Shell <br>
+                And looking forward to more!
+            </p>
+        </section>
+
+        <section class="box courses">
+            <h2>Courses</h2>
+            <p>2023 was the year I focused on courses the most, so I've done those <br>
+                Full-Stack Developer (by ISPC) <br>
+                The web developer boot camp (Udemy) <br>
+                The scrum course (by ScrumStudy) <br>
+                And more +!
+            </p>
+        </section>
+
+        <section class="box hobbies">
+            <h2>Hobbies</h2>
+            <p>I enjoy <span style="color: #cc99ff;">coding</span> just as if it was a hobby! <br>
+                I love <span style="color: #cc99ff;">sports</span>, mostly basketball and chess <br>
+                Meeting people to <span style="color: #cc99ff;">collaborate on projects</span> is part of myself
+            </p>
+        </section>
+
+        <section class="box night-mode">
+            <br>
+            <label class="switch">
+                <input type="checkbox" id="night-mode-toggle">
+                <span class="slider round"></span>
+            </label>
+        </section>
     </div>
+    <script src="index.js"></script>
+    <script>
+        document.getElementById('night-mode-toggle').addEventListener('change', function () {
+             document.body.classList.toggle('night-mode', this.checked);
+        });
+    </script>
 </body>
 </html>

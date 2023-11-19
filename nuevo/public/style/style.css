@@ -1,87 +1,243 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
     color: #333;
-    margin: 0;
-    padding: 0;
 }
 
-header {
-    background-color: #ff4500;
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
-.content {
-    max-width: 800px;
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
     margin: 20px auto;
+    transition: transform 0.3s ease;
 }
-
-.post {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
+a{
+    color:black;
+}
+h2{
+    color: rgb(125, 156, 243);
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
-    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease; /* Add transition properties */
 }
 
-.post:hover {
-    background-color: #f9f9f9;
+.content-hidden .box-content {
+    display: none;
 }
 
-/* Add styles for the initial animation */
-.post-initial {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-    animation: fadeInAndSlide 1s ease-in-out; /* Add fadeInAndSlide animation to the initial post */
+/* Boxes -------------------------------------------*/
+.bigbox {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.box:hover {
+    transform: scale(1.05); /* Scale the box on hover */
 }
 
-/* Keyframes for the initial animation */
-@keyframes fadeInAndSlide {
-    from {
-        opacity: 0;
-        transform: translateX(100%) scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-}
-/* Add your existing styles here */
-
-.comment-section {
-    margin-top: 20px;
+.box.dragging {
+    transition: transform 0.3s ease;
 }
 
-.comment-section h5 {
-    color: #333;
+.box.github {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: #24292e;
 }
 
-.comment-section ul {
+.box.twitter {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: #00001f;
+}
+
+.box.discord {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: #5865F2;
+}
+
+.box.about-me {
+    grid-column: span 2;
+    grid-row: span 1;
+    /*background-color: #ffcc00;*/
+}
+
+.box.age {
+    grid-column: span 1;
+    grid-row: span 1;
+    /*background-color: #ff6666;*/
+}
+
+.box.education {
+    grid-column: span 2; 
+    grid-row: span 1; 
+    /*background-color: #66ccff;*/
+}
+
+.box.linkedin {
+    grid-column: span 1; 
+    grid-row: span 1;
+    background-color: #0077b5;
+}
+
+
+.box.courses {
+    grid-column: span 4; 
+    grid-row: span 2; 
+    /*background-color: #ffccff;*/
+}
+
+.box.goals {
+    grid-column: span 1;
+    grid-row: span 1;
+    /*background-color: #cc99ff;*/
+}
+
+.box.hobbies {
+    grid-column: span 2;
+    grid-row: span 1;
+    /*background-color: #66ff99;*/
+}
+
+/* Adjusted size for Projects */
+.box.projects {
+    grid-column: span 2; 
+    grid-row: span 2; 
+    /*background-color: #ffcc66;*/
+}
+/*switch----------------------------------------------------*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Night Mode Styling ------------------------------------------------------- */
+body.night-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.night-mode .box {
+    background-color: #444;
+    color: #fff;
+}
+
+.night-mode .slider {
+    background-color: #555;
+}
+
+.night-mode .slider:before {
+    background-color: #333;
+}
+
+/* Tools -----------------------------------------------------------------------------------------*/
+.box.tools {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.box.tools ul {
     list-style-type: none;
     padding: 0;
 }
 
-.comment-section li {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+.box.tools li {
+    margin-bottom: 10px;
 }
 
-.comment-section li:last-child {
-    border-bottom: none;
+/* Logos for list items */
+.box.tools li::before {
+    content: '';
+    display: inline-block;
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    margin-right: 10px; /* Adjust the spacing between the logo and text */
+    background-size: contain;
 }
 
-.comment-section li strong {
-    color: #007BFF; /* Change the color to your preference */
+/* Logos for specific languages/tools */
+.box.tools li.javascript::before {
+    background-image: url('path-to-javascript-logo.png'); /* Replace with the path to your JavaScript logo image */
 }
 
-.comment-section li p {
-    margin: 0;
-    color: #555;
+.box.tools li.html::before {
+    background-image: url('path-to-html-logo.png'); /* Replace with the path to your HTML logo image */
 }
 
-.comment-section li small {
-    color: #777;
+.box.tools li.css::before {
+    background-image: url('path-to-css-logo.png'); /* Replace with the path to your CSS logo image */
+}
+
+.box.tools li.express::before {
+    background-image: url('path-to-express-logo.png'); /* Replace with the path to your Express logo image */
+}
+
+.box.tools li.node::before {
+    background-image: url('path-to-node-logo.png'); /* Replace with the path to your Node.js logo image */
+}
+
+.box.tools li.bootstrap::before {
+    background-image: url('path-to-bootstrap-logo.png'); /* Replace with the path to your Bootstrap logo image */
+}
+
+.box.tools li.git::before {
+    background-image: url('path-to-git-logo.png'); /* Replace with the path to your Git logo image */
 }
