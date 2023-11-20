@@ -12,30 +12,53 @@ body {
     margin: 20px auto;
     transition: transform 0.3s ease;
 }
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(minmax(150px, 1fr));
+    gap: 10px;
+    width: 1000px;
+    margin: 20px auto;
+}
+
 a{
     color:black;
+    text-decoration: none;
 }
+
 h2{
-    color: rgb(125, 156, 243);
+    color: #264de4;
 }
-.close-btn {
+
+.top-right {
+    top: 2%;
+    right: 2%;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+    border: 1px;
+    transition: transform 0.3s ease;
 }
 
-.content-hidden .box-content {
-    display: none;
-}
-
-/* Boxes -------------------------------------------*/
+/* Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes 
+Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes
+Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes 
+Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes 
+Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes 
+Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes 
+Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes 
+Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes 
+Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes Boxes */
 .bigbox {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.box.small{
+    grid-column: span 1;
+    grid-row: span 1;
 }
 .box {
     background-color: #fff;
@@ -45,66 +68,48 @@ h2{
     transition: transform 0.3s ease;
 }
 .box:hover {
-    transform: scale(1.05); /* Scale the box on hover */
-}
-
-.box.dragging {
-    transition: transform 0.3s ease;
-}
-
-.box.github {
-    grid-column: span 1;
-    grid-row: span 1;
-    background-color: #24292e;
-}
-
-.box.twitter {
-    grid-column: span 1;
-    grid-row: span 1;
-    background-color: #00001f;
-}
-
-.box.discord {
-    grid-column: span 1;
-    grid-row: span 1;
-    background-color: #5865F2;
+    transform: scale(1.05); 
 }
 
 .box.about-me {
     grid-column: span 2;
     grid-row: span 1;
     /*background-color: #ffcc00;*/
+    background-image: url(https://media.giphy.com/media/VbJeIn7jzpiTS9PczB/giphy.gif);
 }
 
 .box.age {
     grid-column: span 1;
     grid-row: span 1;
-    /*background-color: #ff6666;*/
+    background-color: #ff6666;
 }
 
 .box.education {
-    grid-column: span 2; 
+    grid-column: span 3; 
     grid-row: span 1; 
     /*background-color: #66ccff;*/
-}
-
-.box.linkedin {
-    grid-column: span 1; 
-    grid-row: span 1;
-    background-color: #0077b5;
+    background-image: url(https://media.giphy.com/media/WRRL1EKo9rNe12S4zh/giphy.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 
 .box.courses {
     grid-column: span 4; 
-    grid-row: span 2; 
+    grid-row: span 1; 
     /*background-color: #ffccff;*/
+    background-image: url(https://gifdb.com/images/high/fast-green-stream-coding-kjuq7exuta2jv16v.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .box.goals {
-    grid-column: span 1;
+    grid-column: span 3;
     grid-row: span 1;
     /*background-color: #cc99ff;*/
+    background-image: url(https://i.postimg.cc/VkpYC2f6/moon-1859616-1280.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .box.hobbies {
@@ -113,63 +118,20 @@ h2{
     /*background-color: #66ff99;*/
 }
 
-/* Adjusted size for Projects */
 .box.projects {
     grid-column: span 2; 
     grid-row: span 2; 
     /*background-color: #ffcc66;*/
 }
-/*switch----------------------------------------------------*/
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
+/* Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode 
+Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode 
+Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode 
+Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode 
+Switch Night Mode Switch Night Mode Switch Night Mode Switch Night ModeSwitch Night ModeSwitch Night Mode Switch Night Mode 
+Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode 
+Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode 
+Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode Switch Night Mode */
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    border-radius: 34px;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: .4s;
-}
-
-input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-/* Night Mode Styling ------------------------------------------------------- */
 body.night-mode {
     background-color: #333;
     color: #fff;
@@ -180,15 +142,19 @@ body.night-mode {
     color: #fff;
 }
 
-.night-mode .slider {
-    background-color: #555;
-}
 
-.night-mode .slider:before {
-    background-color: #333;
-}
-
-/* Tools -----------------------------------------------------------------------------------------*/
+/* Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools 
+Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools Tools 
+*/
 .box.tools {
     grid-column: span 3;
     grid-row: span 2;
@@ -207,37 +173,53 @@ body.night-mode {
 .box.tools li::before {
     content: '';
     display: inline-block;
-    width: 20px; /* Adjust the width as needed */
-    height: 20px; /* Adjust the height as needed */
-    margin-right: 10px; /* Adjust the spacing between the logo and text */
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
     background-size: contain;
 }
 
-/* Logos for specific languages/tools */
-.box.tools li.javascript::before {
-    background-image: url('path-to-javascript-logo.png'); /* Replace with the path to your JavaScript logo image */
+.grid-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    max-width: 100%;
+}
+.logos {
+    margin-top: 2%;
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
-.box.tools li.html::before {
-    background-image: url('path-to-html-logo.png'); /* Replace with the path to your HTML logo image */
+/* PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR
+PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR 
+PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BARPROGRES BARPROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR 
+PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR v
+PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR 
+PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR 
+PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR PROGRES BAR
+ */
+.box-content {
+    position: relative;
 }
 
-.box.tools li.css::before {
-    background-image: url('path-to-css-logo.png'); /* Replace with the path to your CSS logo image */
+.progress-bar {
+    height: 10px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 80%;
+    margin: 2% 13%; 
+    padding: 1.5%;
+    animation: loading-animation 2s; 
+    border-radius: 50px;
 }
 
-.box.tools li.express::before {
-    background-image: url('path-to-express-logo.png'); /* Replace with the path to your Express logo image */
+@keyframes loading-animation {
+    0% {
+        width: 0;
+    }
 }
-
-.box.tools li.node::before {
-    background-image: url('path-to-node-logo.png'); /* Replace with the path to your Node.js logo image */
-}
-
-.box.tools li.bootstrap::before {
-    background-image: url('path-to-bootstrap-logo.png'); /* Replace with the path to your Bootstrap logo image */
-}
-
-.box.tools li.git::before {
-    background-image: url('path-to-git-logo.png'); /* Replace with the path to your Git logo image */
+.progress-bar h2{
+    padding-top: 1%;
+    text-align: center;
 }
