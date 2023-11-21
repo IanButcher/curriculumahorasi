@@ -12,9 +12,9 @@
     <div class="box-container">
         <% for (let i = 0; i < content.numberOfCards; i++){ %>
             <% const box = content.boxes[i] || {}; %>
-            <section class="bigbox" style="margin: 3% 3%;">
-                <h2><%= box.title%></h2>
-                <p><%= box.text%></p>
+            <section class="bigbox" style="margin: 3% 3%;"> 
+                <h2><%= box.title %></h2>
+                <p><%= box.text %></p>
                 <div class="box-content">
                     <%- box.image %>
                     <div class="progress-bar" style="width: <%- box.percentage %>%; background-color: <%- box.color %>">
